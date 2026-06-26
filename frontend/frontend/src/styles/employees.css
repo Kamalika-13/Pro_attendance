@@ -1,0 +1,59 @@
+.employee-page {
+  margin-left: 270px;
+  padding: 30px;
+}
+
+.employee-form {
+  display: grid;
+
+  grid-template-columns: repeat(2, 250px);
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+.employee-form input {
+  padding: 10px;
+
+  border-radius: 8px;
+
+  border: 1px solid #ccc;
+}
+
+.employee-btn {
+  background: #3b82f6;
+
+  color: white;
+
+  border: none;
+
+  padding: 10px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.employee-btn:hover {
+  background: #2563eb;
+}
+
+.employee-table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.employee-table th {
+  background: #1e293b;
+
+  color: white;
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 12px;
+
+  border: 1px solid #ddd;
+}

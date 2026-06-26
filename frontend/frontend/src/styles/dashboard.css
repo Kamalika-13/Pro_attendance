@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ==========================
+   Dashboard Page
+========================== */
+
+.dashboard-page {
+  margin-left: 260px;
+  padding: 30px;
+  min-height: 100vh;
+  background: #0a0f1e;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.dashboard-title {
+  font-size: 34px;
+  font-weight: bold;
+  color: #f1f5f9;
+  margin-bottom: 8px;
+}
+
+.dashboard-subtitle {
+  font-size: 16px;
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.date-box {
+  background: #111827;
+  border: 1px solid #1e293b;
+  color: #94a3b8;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* ==========================
+   Cards
+========================== */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.dashboard-card {
+  padding: 28px;
+  border-radius: 18px;
+  color: white;
+  transition: 0.35s;
+  cursor: pointer;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid transparent;
+}
+
+.dashboard-card.blue {
+  background: linear-gradient(135deg, #0c2a6b, #1e3a8a);
+  border-color: #1d4ed8;
+}
+
+.dashboard-card.green {
+  background: linear-gradient(135deg, #064e35, #065f46);
+  border-color: #059669;
+}
+
+.dashboard-card.orange {
+  background: linear-gradient(135deg, #7c2d12, #9a3412);
+  border-color: #ea580c;
+}
+
+.dashboard-card.red {
+  background: linear-gradient(135deg, #7f1d1d, #991b1b);
+  border-color: #dc2626;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.5);
+}
+
+.dashboard-card h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #f1f5f9;
+}
+
+.dashboard-card p {
+  font-size: 16px;
+  margin: 0;
+  color: #cbd5e1;
+}
+
+/* ==========================
+   Charts
+========================== */
+
+.chart-section {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.chart-box {
+  flex: 1;
+  min-width: 400px;
+  background: #111827;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid #1e293b;
+}
+
+.chart-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 20px;
+}
+
+/* ==========================
+   Recharts
+========================== */
+
+.recharts-wrapper {
+  margin: auto;
+}
+
+.recharts-legend-item-text {
+  color: #94a3b8 !important;
+  font-weight: 500;
+}
+
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background: #1a2235 !important;
+  border: 1px solid #2e3f5c !important;
+  border-radius: 10px !important;
+  color: #e2e8f0 !important;
+}
+
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: #1e293b !important;
+}
+
+.recharts-text {
+  fill: #64748b !important;
+}
+
+/* ==========================
+   Scrollbar
+========================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0f1e;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 992px) {
+  .dashboard-page {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .chart-box {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 28px;
+  }
+
+  .dashboard-subtitle {
+    font-size: 14px;
+  }
+
+  .dashboard-card {
+    padding: 22px;
+  }
+
+  .dashboard-card h2 {
+    font-size: 30px;
+  }
+
+  .chart-box {
+    padding: 18px;
+  }
+
+  .chart-title {
+    font-size: 20px;
+  }
+}
